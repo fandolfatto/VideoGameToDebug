@@ -1,0 +1,38 @@
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\bin\Debug\VideoGamesMgt.exe.config
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\bin\Debug\VideoGamesMgt.exe
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\bin\Debug\VideoGamesMgt.pdb
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.csprojAssemblyReference.cache
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.Properties.Resources.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.csproj.GenerateResource.cache
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.csproj.CoreCompileInputs.cache
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.exe
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.pdb
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\bin\Debug\MySql.Data.dll
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\bin\Debug\MySql.Data.Entity.dll
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\bin\Debug\MySql.Web.dll
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.csproj.CopyComplete
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmAddVideoGame.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmVideoGamesList.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmDisplayVideoGames.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmAddEditor.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmAddDeveloper.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmAddPlatform.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.csprojAssemblyReference.cache
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmAddDeveloper.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmAddEditor.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmAddPlatform.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmAddVideoGame.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmDisplayVideoGames.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.frmVideoGamesList.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.Properties.Resources.resources
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.csproj.GenerateResource.cache
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.csproj.CoreCompileInputs.cache
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.exe
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.pdb
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\bin\Debug\VideoGamesMgt.exe.config
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\bin\Debug\VideoGamesMgt.exe
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\bin\Debug\VideoGamesMgt.pdb
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\bin\Debug\MySql.Data.dll
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\bin\Debug\MySql.Data.Entity.dll
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\bin\Debug\MySql.Web.dll
+C:\Data\Cours\2018-2019\MA-24\VideoGamesMgt A debugger\VideoGamesMgt\obj\Debug\VideoGamesMgt.csproj.CopyComplete
