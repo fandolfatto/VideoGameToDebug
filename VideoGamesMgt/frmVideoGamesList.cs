@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**
+ * \file      frmVideoGamesList.cs
+ * \author    F. Andolfatto
+ * \version   1.0
+ * \date      15 Août 2018
+ * \brief     Lists the video games the user has entered in the application.
+ *
+ * \details   This form displays the list of video games that are sorted in the database 
+ * with their properties (outputdate, developers, editors of the game, platform, type of game...) 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**
+ * \file      frmAddPlatform.cs
+ * \author    F. Andolfatto
+ * \version   1.0
+ * \date      15 Août 2018
+ * \brief     Form that enables to list the platforms and then set it to the video game.
+ *
+ * \details   This form lists the platforms on which video games are supported.The user can select on or more platforms.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

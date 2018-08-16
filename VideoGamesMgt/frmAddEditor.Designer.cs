@@ -103,7 +103,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstEditor);
             this.Name = "frmAddEditor";
-            this.Text = "AddEditor";
+            this.Text = "Ajout éditeurs";
             this.Load += new System.EventHandler(this.AddEditor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

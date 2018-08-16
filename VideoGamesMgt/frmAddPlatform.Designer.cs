@@ -83,7 +83,7 @@
             this.Controls.Add(this.lblPlatform);
             this.Controls.Add(this.lstPlatform);
             this.Name = "frmAddPlatform";
-            this.Text = "frmAddPlatform";
+            this.Text = "Ajout plateforme";
             this.Load += new System.EventHandler(this.frmAddPlatform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

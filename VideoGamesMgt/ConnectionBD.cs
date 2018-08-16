@@ -1,6 +1,11 @@
-﻿/* Author : Frédérique Andolfatto 
- * Date : 08.08.2018
- * Version 1.0
+﻿/**
+ * \file      ConnectionBD.cs
+ * \author    F. Andolfatto
+ * \version   1.0
+ * \date      8 Août 2018
+ * \brief     Class that manages the connection and the queries to the database.
+ *
+ * \details   This class contains methods to get data form the database and to insert data from the database.
  */
 
 

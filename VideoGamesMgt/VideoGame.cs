@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**
+ * \file      VideoGame.cs
+ * \author    F. Andolfatto
+ * \version   1.0
+ * \date      16 Août 2018
+ * \brief     Describe the object "VideoGame".
+ *
+ * \details   This class contains methods and properties to manage videogame.
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -103,7 +103,7 @@
             this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.cmdAdd);
             this.Name = "frmAddDeveloper";
-            this.Text = "frmAddDeveloper";
+            this.Text = "Ajout développeurs";
             this.Load += new System.EventHandler(this.frmAddDeveloper_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

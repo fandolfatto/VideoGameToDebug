@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**
+ * \file      frmDisplayVideoGames.cs
+ * \author    F. Andolfatto
+ * \version   1.0
+ * \date      15 Août 2018
+ * \brief     Displays the properties of the selected game.
+ *
+ * \details   This form displays the properties of the selected video game.
+ * From the id displayed in the main form, we get the information in the database.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

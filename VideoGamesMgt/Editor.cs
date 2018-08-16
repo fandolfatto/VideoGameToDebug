@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**
+ * \file      Editor.cs
+ * \author    F. Andolfatto
+ * \version   1.0
+ * \date      16 Août 2018
+ * \brief     Describe the object "Editor".
+ *
+ * \details   This class contains methods and properties to manage editor.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +18,9 @@ namespace VideoGamesMgt
 {
     public class Editor
     {
-
+        /// <summary>
+        /// Describe an editor (name and id)
+        /// </summary>
         private string name;
         private long id;
 

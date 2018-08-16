@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**
+ * \file      frmAddVideoGames.cs
+ * \author    F. Andolfatto
+ * \version   1.0
+ * \date      15 Août 2018
+ * \brief     Form that enables to add a video game.
+ *
+ * \details   This form enables to create a new video game by entering a name and its other properties 
+ * (outputdate, developers, editors of the game, platform, type of game...) 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**
+ * \file      frmAddEditor.cs
+ * \author    F. Andolfatto
+ * \version   1.0
+ * \date      15 Août 2018
+ * \brief     Form that enables to list the editors already existing for other video games and to add new ones and then set them to the video game.
+ *
+ * \details   This form lists the editors that have already been set to a video game and enables to create new editor.
+ * The user can then select on or more editors and add a new name for an editor.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
