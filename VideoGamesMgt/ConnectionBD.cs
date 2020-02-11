@@ -41,8 +41,10 @@ namespace VideoGamesMgt
         /// </summary>
         private void InitConnexion()
         {
-            // Creation of the connection string
-            string connectionString = "SERVER=127.0.0.1; DATABASE=videogames; UID=root; PASSWORD=P@ssw0rd";
+            // Creation of the connection string : where, who
+            // Avoid user id and pwd hardcoded
+            ConfigJSONFile confJSONFile = ConfigJSONFile.ReadJSONFile(@"JSONConfig.json");
+            string connectionString = "SERVER=" + confJSONFile.ServerIP + "; DATABASE=" + confJSONFile.Database + "; UID=" + confJSONFile.User + "; PASSWORD=" + confJSONFile.Password;
             connection = new MySqlConnection(connectionString);
             // Open the SQL connection
             OpenConnection();
