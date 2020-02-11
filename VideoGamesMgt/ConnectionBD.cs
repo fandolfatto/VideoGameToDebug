@@ -42,7 +42,7 @@ namespace VideoGamesMgt
         private void InitConnexion()
         {
             // Creation of the connection string
-            string connectionString = "SERVER=127.0.0.1; DATABASE=videogames; UID=root; PASSWORD=";
+            string connectionString = "SERVER=127.0.0.1; DATABASE=videogames; UID=root; PASSWORD=P@ssw0rd";
             connection = new MySqlConnection(connectionString);
             // Open the SQL connection
             OpenConnection();
@@ -99,7 +99,7 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // SQL request
-                cmd.CommandText = "select nameType from type";
+                cmd.CommandText = "select name from types";
 
                 // SQL command execution
                 rdr = cmd.ExecuteReader();
@@ -142,7 +142,7 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // SQL request
-                cmd.CommandText = "select namePlatform from platform order by namePlatform";
+                cmd.CommandText = "select name from platforms order by name";
 
                 // Execution of the SQL command
                 rdr = cmd.ExecuteReader();
@@ -185,7 +185,7 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // SQL request
-                cmd.CommandText = "select idEditor, nameEditor from editor order by nameEditor";
+                cmd.CommandText = "select id, name from editors order by name";
 
                 // Execution of the SQL command
                 rdr = cmd.ExecuteReader();
@@ -231,7 +231,7 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // SQL request
-                cmd.CommandText = "select idDeveloper, nameDeveloper from developer order by nameDeveloper";
+                cmd.CommandText = "select id, name from developers order by name";
 
                 // Execution of the SQL command
                 rdr = cmd.ExecuteReader();
@@ -278,7 +278,7 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // Requête SQL
-                cmd.CommandText = "select idType from Type where nameType = @type";
+                cmd.CommandText = "select id from Types where name = @type";
                 cmd.Parameters.AddWithValue("@type", type);
 
                 // Exécution de la commande SQL
@@ -321,10 +321,10 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // Requête SQL
-                cmd.CommandText = "select v.nameVideoGame, v.dateOutput, t.nameType, v.idVideoGame " +
-                    "from videogame v " +
-                    "inner join type t on v.fkType = t.idType " +
-                    "order by v.nameVideoGame";
+                cmd.CommandText = "select v.name, v.dateOutput, t.name, v.id " +
+                    "from videogames v " +
+                    "inner join types t on v.type_id = t.id " +
+                    "order by v.name";
 
                 // Exécution de la commande SQL
                 rdr = cmd.ExecuteReader();
@@ -381,8 +381,8 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = connection.CreateCommand();
 
                 // Requête SQL
-                cmd.CommandText = "select e.idEditor, e.nameEditor " +
-                    "from editor e, editorvideogame evg where e.idEditor = evg.fkeditor and fkVideogame = '" + vgId + "'";
+                cmd.CommandText = "select e.id, e.name " +
+                    "from editors e, editorvideogames evg where e.id = evg.editor_id and videogame_id = '" + vgId + "'";
 
                 // Exécution de la commande SQL
                 rdr = cmd.ExecuteReader();
@@ -429,9 +429,9 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = connection.CreateCommand();
 
                 // Requête SQL
-                cmd.CommandText = "select d.idDeveloper, d.nameDeveloper " +
-                    "from developer d, developervideogame dvg " +
-                    "where d.idDeveloper = dvg.fkdeveloper and fkVideogame = '" + vgId + "'";
+                cmd.CommandText = "select d.id, d.name " +
+                    "from developers d, developervideogames dvg " +
+                    "where d.id = dvg.developer_id and videogame_id = '" + vgId + "'";
 
                 // Exécution de la commande SQL
                 rdr = cmd.ExecuteReader();
@@ -477,8 +477,8 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = connection.CreateCommand();
 
                 // Requête SQL
-                cmd.CommandText = "select namePlatform from platformvideogame v, platform p " +
-                    "where p.idPlatform = v.fkPlatform and fkVideogame = '" + vgId + "'";
+                cmd.CommandText = "select name from platformvideogames v, platforms p " +
+                    "where p.id = v.Platform_id and videogame_id = '" + vgId + "'";
 
                 // Exécution de la commande SQL
                 rdr = cmd.ExecuteReader();
@@ -524,7 +524,7 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // Requête SQL : add data into videogame table
-                cmd.CommandText = "INSERT INTO videogame (nameVideoGame, dateOutput, fkType) VALUES (@nom, @dateOutput, @fkType)";
+                cmd.CommandText = "INSERT INTO videogames (name, dateOutput, type_id) VALUES (@nom, @dateOutput, @fkType)";
 
                 // utilisation de l'objet contact passé en paramètre
                 cmd.Parameters.AddWithValue("@nom", game.Name);
@@ -539,7 +539,7 @@ namespace VideoGamesMgt
                 {
                     int platFormId = GetPlatformId(platform);
                     //insert data into the platformvideogame table
-                    cmd.CommandText = "INSERT INTO platformvideogame (fkplatform, fkvideogame) VALUES (@idplatform, @idvideogame)";
+                    cmd.CommandText = "INSERT INTO platformvideogames (platform_id, videogame_id) VALUES (@idplatform, @idvideogame)";
 
                     // utilisation de l'objet contact passé en paramètre
                     cmd.Parameters.AddWithValue("@idplatform", platFormId);
@@ -558,7 +558,7 @@ namespace VideoGamesMgt
                     if (editorId == 0)
                     {
                         //insert into the editor table if the editor does not exist yet
-                        cmd.CommandText = "INSERT INTO editor (nameeditor) VALUES (@nameeditor)";
+                        cmd.CommandText = "INSERT INTO editors (name) VALUES (@nameeditor)";
                         // utilisation de l'objet contact passé en paramètre
                         cmd.Parameters.AddWithValue("@nameeditor", ed);
                         // Exécution de la commande SQL
@@ -568,7 +568,7 @@ namespace VideoGamesMgt
                     }
 
                     // editorvideogame table
-                    cmd.CommandText = "INSERT INTO editorvideogame (fkeditor, fkvideogame) VALUES (@fkeditor, @fkvideogame)";
+                    cmd.CommandText = "INSERT INTO editorvideogames (editor_id, videogame_id) VALUES (@fkeditor, @fkvideogame)";
                     // utilisation de l'objet contact passé en paramètre
                     cmd.Parameters.AddWithValue("@fkeditor", editorId);
                     cmd.Parameters.AddWithValue("@fkvideogame", videogameId);
@@ -583,7 +583,7 @@ namespace VideoGamesMgt
                     if (developerId == 0)
                     {
                         //insert data into the developer table if it does not exist yet
-                        cmd.CommandText = "INSERT INTO developer (namedeveloper) VALUES (@namedeveloper)";
+                        cmd.CommandText = "INSERT INTO developers (name) VALUES (@namedeveloper)";
                         // utilisation de l'objet contact passé en paramètre
                         cmd.Parameters.AddWithValue("@namedeveloper", dev);
                         // Exécution de la commande SQL
@@ -592,7 +592,7 @@ namespace VideoGamesMgt
                         cmd.Parameters.Clear();
                     }
                     //insert into developervideogame table
-                    cmd.CommandText = "INSERT INTO developervideogame (fkdeveloper, fkvideogame) VALUES (@fkdev, @fkvideogame)";
+                    cmd.CommandText = "INSERT INTO developervideogames (developer_id, videogame_id) VALUES (@fkdev, @fkvideogame)";
                     // utilisation de l'objet contact passé en paramètre
                     cmd.Parameters.AddWithValue("@fkdev", developerId);
                     cmd.Parameters.AddWithValue("@fkvideogame", videogameId);
@@ -606,7 +606,7 @@ namespace VideoGamesMgt
             {
                 // Gestion des erreurs :
                 // Possibilité de créer un Logger pour les exceptions SQL reçus
-                throw new VgSQLException("Erreur lors de l'insertion d'un jeu vidéo");
+                throw new VgSQLException("Erreur lors de l'insertion d'un jeu vidéo : " + ex.Message);
             }
             return videogameId;
         }
@@ -630,7 +630,7 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // Requête SQL : insert into the platform table
-                cmd.CommandText = "select idPlatform from platform where namePlatform = @platformname";
+                cmd.CommandText = "select id from platforms where name = @platformname";
 
                 cmd.Parameters.AddWithValue("@platformname", platformName);
 
@@ -673,9 +673,9 @@ namespace VideoGamesMgt
                 MySqlCommand cmd = this.connection.CreateCommand();
 
                 // Requête SQL
-                cmd.CommandText = "select namevideogame, dateoutput, nametype " +
-                    "from videogame left outer join type on type.idtype = videogame.fktype " +
-                    "where idVideoGame = '" + vgId + "'";
+                cmd.CommandText = "select v.name, dateoutput, t.name " +
+                    "from videogames v left outer join types t on t.id = v.type_id " +
+                    "where v.id = '" + vgId + "'";
 
                 // Exécution de la commande SQL
                 rdr = cmd.ExecuteReader();
@@ -690,7 +690,7 @@ namespace VideoGamesMgt
             catch (MySqlException ex)
             {
                 Console.WriteLine("Error: {0}", ex.ToString());
-                throw new VgSQLException("Erreur lors de la recherche des informations sur le jeu vidéo à partir de son id");
+                throw new VgSQLException("Erreur lors de la recherche des informations sur le jeu vidéo à partir de son id : " + ex.Message);
             }
             catch (Exception ex)
             {
