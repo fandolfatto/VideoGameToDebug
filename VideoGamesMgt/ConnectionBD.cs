@@ -18,6 +18,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 using System.Data;
+using System.IO;
 
 ////tiré du site http://blog.mounier-logiciels.fr/comment-creer-une-connection-mysql-local-en-CSharp.html
 //https://dev.mysql.com/doc/connector-net/en/connector-net-tutorials-sql-command.html
@@ -43,7 +44,7 @@ namespace VideoGamesMgt
         {
             // Creation of the connection string : where, who
             // Avoid user id and pwd hardcoded
-            ConfigJSONFile confJSONFile = ConfigJSONFile.ReadJSONFile(@"JSONConfig.json");
+            ConfigJSONFile confJSONFile = ConfigJSONFile.ReadJSONFile(@"..\..\JSONConfig.json");
             string connectionString = "SERVER=" + confJSONFile.ServerIP + "; DATABASE=" + confJSONFile.Database + "; UID=" + confJSONFile.User + "; PASSWORD=" + confJSONFile.Password;
             connection = new MySqlConnection(connectionString);
             // Open the SQL connection
